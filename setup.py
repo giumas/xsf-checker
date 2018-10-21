@@ -63,7 +63,7 @@ setup(
     description="A library and tools to check file compliance for the eXtended Sounder Format.",
     long_description=read(os.path.join(here, "README.rst")),
     url="https://github.com/giumas/xsf-checker",
-    classifier=[  # https://pypi.python.org/pypi?%3Aaction=list_classifiers
+    classifiers=[  # https://pypi.python.org/pypi?%3Aaction=list_classifiers
         "Development Status :: 4 - Beta",
         "Intended Audience :: Science/Research",
         "Natural Language :: English",

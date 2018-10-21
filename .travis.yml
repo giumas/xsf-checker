@@ -24,7 +24,7 @@ before_install:
 
 # Test source distribution.
 install:
-    - python setup.py sdist && version=$(python setup.py --version) && pushd dist  && pip install xsf-checker-${version}.tar.gz --no-deps && popd
+    - python setup.py sdist && version=$(python setup.py --version) && pushd dist  && pip install xsf_checker-${version}.tar.gz --no-deps && popd
 
 script:
   #
