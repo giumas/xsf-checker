@@ -6,6 +6,10 @@ XSF Checker
 
 |
 
+.. image:: https://travis-ci.org/giumas/xsf-checker.svg?branch=master
+    :target: https://travis-ci.org/giumas/xsf-checker
+    :alt: Travis-CI Status
+
 .. image:: https://ci.appveyor.com/api/projects/status/j1xd7od61oph2q3d?svg=true
     :target: https://ci.appveyor.com/project/giumas/xsf-checker
     :alt: AppVeyor Status
