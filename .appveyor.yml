@@ -25,6 +25,15 @@ install:
   - cmd: conda.exe config --remove channels defaults --force
   - cmd: conda.exe config --add channels conda-forge --force
   - cmd: set PYTHONUNBUFFERED=1
+
+  # Install compliance-checker and its requirements
+  - cmd: git clone -q --branch=master https://github.com/ioos/compliance-checker.git C:\projects\compliance-checker
+  - ps: cd C:\projects\compliance-checker
+  - cmd: python gen_conda_requirements.py --groups requirements.txt --py%PY:~0,1% > conda-requirements.txt
+  - cmd: conda.exe create --name TEST python=%PY% --file conda-requirements.txt --file test_requirements.txt
+  - cmd: python -m pip install . --no-deps --ignore-installed --no-cache-dir
+  - ps: cd C:\projects\xsf-checker
+
   - cmd: conda.exe info --all
   - cmd: conda.exe list
 
@@ -33,5 +42,5 @@ install:
 build: off
 
 test_script:
-  - python -m pip install .
+  - python -m pip install . --no-deps --ignore-installed --no-cache-dir
   # - pytest -s -rxs -v -k "not integration" compliance_checker
