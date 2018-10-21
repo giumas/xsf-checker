@@ -42,5 +42,11 @@ install:
 build: off
 
 test_script:
-  - python -m pip install . --no-deps --ignore-installed --no-cache-dir
-  # - pytest -s -rxs -v -k "not integration" compliance_checker
+  - cmd: python -m pip install . --no-deps --ignore-installed --no-cache-dir
+  - cmd: python -m unittest discover
+
+after_test:
+  - cmd: python setup.py bdist_wheel
+
+artifacts:
+  - path: dist\*

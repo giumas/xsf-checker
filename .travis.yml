@@ -7,8 +7,10 @@ matrix:
   include:
   - python: 3.6
     env: TEST_TARGET=default
+  - python: 3.7
+    env: TEST_TARGET=default
   allow_failures:
-  - python: 3.6
+  - python: 3.7
     env: TEST_TARGET=default
 
 before_install:
@@ -24,7 +26,7 @@ before_install:
 
 # Test source distribution.
 install:
-    - python setup.py sdist && version=$(python setup.py --version) && pushd dist  && pip install xsf_checker-${version}.tar.gz --no-deps && popd
+  - python setup.py sdist && version=$(python setup.py --version) && pushd dist && pip install xsf_checker-${version}.tar.gz --no-deps && popd
 
 script:
-  #
+  - python -m unittest discover
