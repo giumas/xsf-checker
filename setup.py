@@ -38,9 +38,7 @@ setup(
     packages=find_packages(exclude=[
         "*.tests", "*.tests.*", "tests.*", "tests", "*.test*",
     ]),
-    package_data={
-
-    },
+    include_package_data=True,
     zip_safe=False,
     setup_requires=[
         "setuptools",

@@ -28,11 +28,22 @@ XSF Checker
 General info
 ------------
 
-The XSF Checker provides a library and tools to check file compliance for the eXtended Sounder Format.
+The XSF Checker is a python based tool to check for completeness and community standard compliance of local or
+remote netCDF files against the eXtended Sounder Format.
+
+The python module can be used as a command-line tool or as a library that can be integrated into other software.
+
+The python module is coded similar to a Python standard Unit Test.
+A Check Suite runs checks against a dataset based on a metadata standard, returning a list of Results which are then
+aggregated into a summary.
+
+For the CF compliance checks, XSF Checker uses the IOOS `Compliance Checker <https://github.com/ioos/compliance-checker>`_.
 
 |
 
 How to install
 --------------
 
-To install the *compliance-checker* dependency, follow the instructions on this `wiki <https://github.com/ioos/compliance-checker/wiki>`_.
+To install the *compliance-checker* dependency, follow the instructions on this
+`wiki <https://github.com/ioos/compliance-checker/wiki>`_.
+
