@@ -6,6 +6,10 @@ XSF Checker
 
 |
 
+.. image:: https://ci.appveyor.com/api/projects/status/j1xd7od61oph2q3d?svg=true
+    :target: https://ci.appveyor.com/project/giumas/xsf-checker
+    :alt: AppVeyor Status
+
 .. image:: https://api.codacy.com/project/badge/Grade/39c7c36f8021462db8e514fba2774c2f
     :target: https://www.codacy.com/app/hydroffice/xsf-checker/dashboard
     :alt: codacy
