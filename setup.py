@@ -50,11 +50,14 @@ setup(
     python_requires='>=3.5',
     entry_points={
         "gui_scripts": [
-            "XSFChecker = xsf_checker.app:main",
+            "XSFChecker = xsf_checker.app.app:main",
         ],
         "console_scripts": [
-            "xsf_checker = xsf_checker.cli:main",
+            "xsf_checker = xsf_checker.cli.main:main",
         ],
+        "compliance_checker.suites": [
+            'xsf = xsf_checker.library.xsf_check:XSFCheck',
+        ]
     },
     test_suite="tests",
 
